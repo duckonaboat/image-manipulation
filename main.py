@@ -16,6 +16,8 @@ im8 = im1.filter(ImageFilter.SHARPEN)
 im9 = im1.filter(ImageFilter.SMOOTH)
 im10 = im1.filter(ImageFilter.SMOOTH_MORE)
 
+
+#Defiantly a better way to do this but it works for now.
 filtertoapply = input("Filter: ")
 if filtertoapply == "im2":
     im2.show()
