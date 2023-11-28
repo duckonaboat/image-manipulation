@@ -178,6 +178,13 @@ console.log('duplicate', dog)
 }
 dogamt = 0;
 
+function orderimg() {
+const picture = document.getElementById('testsubject');
+const doged = ["https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/breed_library/affenpinscher.jpg?itok=HFBGWk_x", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0000_afghan_hound_0.jpg?itok=vkb8L2gC", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0001_airedale_terrier_0.jpg?itok=dvziZunq", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0002_alaskan_malamute_0.jpg?itok=xJ9tGkgt", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2023-10/BREED%20Hero%20American%20Bulldog_0.jpg?itok=Q4ApiEXA", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0122_spaniel_american_cocker.jpg?itok=6tp5ZyMZ", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0003_anatolian_shepherd_0.jpg?itok=OuNMUJIo", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0004_australian_cattle_dog_0.jpg?itok=J67OtFMX", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0005_australian_shepherd_dog_0.jpg?itok=zc1yYpsb", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/breed_library/australian_silky_terrier.jpg?itok=5tlr9UrZ", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero%20Australian%20Terrier_0.jpg?itok=fpftBRzI", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-12/GettyImages-856980022%20%282%29.jpg?itok=G7IOaQPg","/static/images/marmalade1.png" ] 
+dogamt = (dogamt + 1) % doged.length;
+picture.src = doged[dogamt];
+console.log(dogamt)
+}
 
 var seizurehappening = false
 
