@@ -178,12 +178,6 @@ console.log('duplicate', dog)
 }
 dogamt = 0;
 
-function cehangeimg() {
-const picture = document.getElementById('testsubject');
-picture.src = dogs[dogamt];
-
-dogamt = (dogamt + 1) % dogs.length;
-}
 
 var seizurehappening = false
 
