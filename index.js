@@ -1,3 +1,5 @@
+
+
 var x=0;
 
 function valuess() {
@@ -70,6 +72,10 @@ tablegray.innerHTML = grayscale;
 
 }
 
+function changeimg() {
+   
+}
+
 function clearfilter() {
     document.getElementById("testsubject").style.filter = ""
     document.getElementById("changehue").value = ""
@@ -121,8 +127,9 @@ function randomfilter() {
     }
 
     if (x==1) {
-        document.getElementById("testsubject").style.filter = "hue-rotate("+random1+"deg) contrast("+random3+"%) saturate("+random2+"%) brightness("+random6+"%) invert("+random4+"%)";
+        document.getElementById("testsubject").style.filter = "hue-rotate("+random1+"deg) contrast("+random3+"%) saturate("+random2+"%) invert("+random4+"%)";
     }
+    //for random, there is no grayscale, sepia or blur because it will most likely look like a black/white/gray blob
     else {
         document.getElementById("testsubject").style.filter = "hue-rotate("+random1+"deg) contrast("+random3+"%) saturate("+random2+"%)"
     }
@@ -155,17 +162,43 @@ function advancedfilter() {
 
 
 function changeimg() {
-//I just scraped a bunch of images of dog breeds addresses from purina.co.uk
-const dogs = ["https://www.purina.co.uk/sites/default/files/migrate_default_content_files/navigation-block-001.jpg", "https://www.purina.co.uk/sites/default/files/2021-10/header-dog.jpg", "https://www.purina.co.uk/sites/default/files/2021-10/header-cat.jpg", "https://www.purina.co.uk/sites/default/files/migrate_default_content_files/navigation-block-004.jpg", "https://www.purina.co.uk/sites/default/files/2021-01/menu%20bar%20YQM.jpg", "https://www.purina.co.uk/sites/default/files/2023-09/purina-care-desktop_0.jpg", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/breed_library/affenpinscher.jpg?itok=HFBGWk_x", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0000_afghan_hound_0.jpg?itok=vkb8L2gC", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0001_airedale_terrier_0.jpg?itok=dvziZunq", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0002_alaskan_malamute_0.jpg?itok=xJ9tGkgt", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2023-10/BREED%20Hero%20American%20Bulldog_0.jpg?itok=Q4ApiEXA", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0122_spaniel_american_cocker.jpg?itok=6tp5ZyMZ", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0003_anatolian_shepherd_0.jpg?itok=OuNMUJIo", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0004_australian_cattle_dog_0.jpg?itok=J67OtFMX", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0005_australian_shepherd_dog_0.jpg?itok=zc1yYpsb", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/breed_library/australian_silky_terrier.jpg?itok=5tlr9UrZ", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero%20Australian%20Terrier_0.jpg?itok=fpftBRzI", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-12/GettyImages-856980022%20%282%29.jpg?itok=G7IOaQPg", "https://www.purina.co.uk/sites/default/files/nppe_breed_selector/modal/purina-logo%20%281%29.png", "https://www.purina.co.uk/sites/default/files/nppe_breed_selector/modal/thank-you-footer.jpg", "https://www.purina.co.uk/sites/default/files/migrate_default_content_files/nestle.png"]
+
+const dogs = ["https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/breed_library/affenpinscher.jpg?itok=HFBGWk_x", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0000_afghan_hound_0.jpg?itok=vkb8L2gC", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0001_airedale_terrier_0.jpg?itok=dvziZunq", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0002_alaskan_malamute_0.jpg?itok=xJ9tGkgt", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2023-10/BREED%20Hero%20American%20Bulldog_0.jpg?itok=Q4ApiEXA", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0122_spaniel_american_cocker.jpg?itok=6tp5ZyMZ", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0003_anatolian_shepherd_0.jpg?itok=OuNMUJIo", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0004_australian_cattle_dog_0.jpg?itok=J67OtFMX", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero_0005_australian_shepherd_dog_0.jpg?itok=zc1yYpsb", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/breed_library/australian_silky_terrier.jpg?itok=5tlr9UrZ", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-02/BREED%20Hero%20Australian%20Terrier_0.jpg?itok=fpftBRzI", "https://www.purina.co.uk/sites/default/files/styles/nppe_breed_selector_500/public/2021-12/GettyImages-856980022%20%282%29.jpg?itok=G7IOaQPg" ] 
 const random = Math.floor(Math.random() * dogs.length);
 dog = (random, dogs[random]);
-picture = document.getElementById('testsubject').src = dog;
+picture = document.getElementById('testsubject')
+if (picture == dog ) {
+dog = (random, dogs[random]); 
+picture.src = dog;
+console.log('duplicate', dog)
+} else {
+    picture.src = dog;
+}
+
 }
 dogamt = 0;
 
-// change image in an order
-//function cehangeimg() {
-//const picture = document.getElementById('testsubject');
-//picture.src = dogs[dogamt];
-//dogamt = (dogamt + 1) % dogs.length; }
+function cehangeimg() {
+const picture = document.getElementById('testsubject');
+picture.src = dogs[dogamt];
 
+dogamt = (dogamt + 1) % dogs.length;
+}
+
+var seizurehappening = false
+
+function seizure() {
+    if (seizurehappening == true) {
+        seizurehappening = false;
+        clearInterval(intervalId);
+        document.getElementById('seizurebutton').innerText = 'Seizure'
+       
+    } else {
+        seizurehappening = true;
+        document.getElementById('seizurebutton').innerText = 'Stop Seizure'
+        intervalId = window.setInterval(function(){
+            randomfilter();
+            }, 10);
+    }
+     
+}
