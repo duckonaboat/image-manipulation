@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Zebras</title>
+</head>
+<body>
+    <div id="buttonWrapper">
+    <div class="flexbox">
+     <!-- <div id="dropdownbox" onclick="dropDown();">
+            <p> More </p>
+        </div> -->
+        <div id="huerotatebutton" onclick="huerotate();">
+            <p> Hue </p>
+        </div>   
+        <div id="contrastbutton" onclick="contraston();">
+            <p> Contrast </p>
+        </div>
+        <div id="saturationbutton" onclick="saturation();">
+            <p> Saturation </p>
+        </div>
+        <div id="sepiabutton" onclick="sepia();">
+            <p> Sepia </p>
+        </div>
+        <div id="grayscale" onclick="grayscale();">
+            <p> Grayscale </p>
+        </div>
+        <div id="invertbutton" onclick="invert();">
+            <p> Invert </p>
+        </div>
+
+    </div>
+</div>
+<br>
+<div>
+
+</div>
+
+
+    <div id="mainpage">
+        <div class="content">
+            <div class="flexbox" style="border: none;" id="dogbox">
+                 <div style="border: none;" id="imgdiv"> 
+                    <img src="assets/stupiddog.jpeg" alt="dog" id="picture1"> 
+                    <img src="assets/puthimdown.jpeg" alt="dog" id="picture2"> 
+                    <img src="assets/homeless.jpeg" alt="dog" id="picture3">
+                    <img src="assets/dog.jpeg" alt="dog" id="picture4">
+                    <img alt="dog" id="customPicture">
+                </div>
+                
+            </div>
+            <label id="valueCounter"> 0 </label>
+            <label id="filterModeLabel"> hue-rotate </label>
+        </div>
+        </div>
+<div id="filterButtons">
+    <label id="filterModeLabel" style="text-decoration: underline;"> Filter </label>
+    <br><br>
+        <button onclick="ordercolor();" id="seizureButton"> Start </button>
+        
+        <button onclick="stopseizure();" id="stopSeizureButton"> Stop </button>
+
+
+        <button onclick="resetSeizure();" id="resetFilters"> Reset </button>
+
+        <button onclick="changecolor();"> Random </button>
+        <br><br>
+        <input placeholder="custom value" oninput="customvalue();" id="custom">
+        <input placeholder="custom image (URL)" oninput="customImage();" id="customImg">
+        <button onclick="clearCustom();"> Clear </button>
+        
+    </div>
+    <div id="advanced">
+
+   
+    <!-- <div id="multipleFilters">
+        <p> Multiple Filters </p>
+        <input type="checkbox" id="hueCheck"> Hue <br>
+        <input type="checkbox" id="contrastCheck"> Contrast <br>
+        <input type="checkbox" id="saturationCheck"> Saturation <br>
+        <input type="checkbox" id="sepiaCheck"> Sepia <br>
+        <input type="checkbox" id="grayscaleCheck"> Grayscale <br>
+        <input type="checkbox" id="invertCheck"> Invert <br>
+
+    </div> -->
+    <div id="otherFiltersBox">
+        <p> Filters </p>
+        <input placeholder="Hue" oninput="customMutipleFilters();" id="customHue"> <button> clear </button>
+<br>
+        <input placeholder="Contrast" oninput="customMutipleFilters();" id="customContrast"> <button> clear </button>
+<br>
+        <input placeholder="Saturation" oninput="customMutipleFilters();" id="customSaturation"> <button> clear </button>
+<br>
+        <input placeholder="Sepia" oninput="customMutipleFilters();" id="customSepia"> <button> clear </button>
+<br>
+        <input placeholder="Grayscale" oninput="customMutipleFilters();" id="customGray"> <button> clear </button>
+        <br>
+        <input placeholder="Invert" oninput="customMutipleFilters();" id="customInvert"> <button> clear </button>
+        <br>
+        <button onclick="clearAllFilters();"> clear all </button>
+    </div>
+    </div>
+  
+
+
+        <!-- <input id="colorspeed" placeholder="speed" oninput="colorspeed();">
+        <label id="currentSpeed"> 100 </label> -->
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    margin: 2px;
+    user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+}
+
+#mainpage {
+
+}
+
+#mainpage > .content {
+    border: 1px solid white;
+    background-image: linear-gradient(rgba(21, 112, 173, 0.776), rgb(90, 138, 117));
+    padding: 1rem;
+    border-radius: 5px;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    margin-top: auto;
+    
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    
+}
+
+.flexbox > div {
+    padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    border: 1px solid white;
+    
+}
+
+#buttonWrapper > .flexbox > div:hover {
+    background-color: rgb(60, 59, 59);
+}
+
+img {
+    height: 75px;
+    width: 75px;
+    border-radius: 5px;
+}
+
+#stopSeizureButton {
+    display: none;
+}
+
+#colorspeed {
+    display: inline-block;
+}
+
+#resetFilters {
+    display: inline-block;
+}
+
+#filterButtons {
+    margin: 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 1rem;
+}
+
+#dropdownbox {
+
+}
+
+#advanced > div {
+    float: left;
+}
+
+#customPicture {
+    display: none;
+}
+
+#multipleFilters {
+    border: 1px solid white;
+    margin: 1rem;
+    padding: 5px;
+    width: fit-content;
+}
+
+#otherFiltersBox {
+    border: 1px solid white;
+    margin: 1rem;
+    padding: 5px;
+    width: fit-content;
+    float: right;
+}
+
+#otherFiltersBox > input {
+    margin: 3px;
+}
